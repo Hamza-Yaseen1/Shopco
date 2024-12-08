@@ -1,3 +1,4 @@
+import Image from "next/image";
 function Navbar() {
   return (
     <>
@@ -32,7 +33,7 @@ function Navbar() {
 
             {/* Search Bar */}
             <li className="flex items-center border border-gray-300 rounded-md bg-white shadow-sm p-2">
-              <img
+              <Image
                 src="./icons/search.svg"
                 alt="Search icon"
                 className="h-5 w-5 mr-2"
@@ -47,12 +48,12 @@ function Navbar() {
             {/* Icons */}
             <li>
               <a href="#" className="hover:text-blue-500 transition-colors">
-                <img src="./icons/cart.svg" alt="Cart" className="h-6 w-6" />
+                <Image src="./icons/cart.svg" alt="Cart" className="h-6 w-6" />
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500 transition-colors">
-                <img src="./icons/user.svg" alt="User Account" className="h-6 w-6" />
+                <Image src="./icons/user.svg" alt="User Account" className="h-6 w-6" />
               </a>
             </li>
           </ul>

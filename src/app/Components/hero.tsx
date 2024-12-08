@@ -89,9 +89,11 @@ function Hero() {
 
         {/* Hero Image */}
         <div className="hero-img w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center mt-6">
-          <img
+          <Image
             src="/images/header-homepage.png"
             alt="Hero showcasing stylish clothes"
+            width={800} 
+            height={600} 
             className="object-cover"
           />
         </div>
