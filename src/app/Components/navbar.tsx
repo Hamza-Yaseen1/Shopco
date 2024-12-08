@@ -37,6 +37,8 @@ function Navbar() {
                 src="./icons/search.svg"
                 alt="Search icon"
                 className="h-5 w-5 mr-2"
+                width={20}
+                height={20}
               />
               <input
                 type="text"
@@ -48,12 +50,16 @@ function Navbar() {
             {/* Icons */}
             <li>
               <a href="#" className="hover:text-blue-500 transition-colors">
-                <Image src="./icons/cart.svg" alt="Cart" className="h-6 w-6" />
+                <Image src="./icons/cart.svg" alt="Cart" className="h-6 w-6"
+                width={20}
+                height={20} />
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-blue-500 transition-colors">
-                <Image src="./icons/user.svg" alt="User Account" className="h-6 w-6" />
+                <Image src="./icons/user.svg" alt="User Account" className="h-6 w-6" 
+                width={20}
+                height={20}/>
               </a>
             </li>
           </ul>
