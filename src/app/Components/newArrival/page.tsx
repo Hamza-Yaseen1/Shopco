@@ -1,5 +1,15 @@
 import React from "react";
 import Card from "./cards";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import Filters from "../shop-page/filters/page";
 
 const products = [
   {
@@ -69,16 +79,47 @@ const products = [
 
 const NewArrival = () => {
   return (
-   <>
-   <div className="flex">
-   <div className="filter w-1/3">Filter Portion here</div>
-   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-      {products.map((product) => (
-        <Card key={product.id} product={product} />
-      ))}
+    <div className="flex flex-col md:flex-row">
+      {/* Filter Section */}
+      <div className="filter w-full md:w-1/3 p-4 bg-gray-100 rounded-md">
+        <h2 className="text-lg font-bold mb-4"> <Filters/> </h2>
+      </div>
+
+      {/* Product Cards Section */}
+      <div className="w-full md:w-2/3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+          {products.map((product) => (
+            <Card key={product.id} product={product} />
+          ))}
+        </div>
+
+        {/* Pagination Section */}
+        <div className="flex justify-center mt-6">
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href="#" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">1</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">2</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">3</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="#" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </div>
+      </div>
     </div>
-   </div>
-   </>
   );
 };
 
