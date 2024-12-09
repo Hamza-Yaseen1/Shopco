@@ -1,22 +1,23 @@
 import Image from "next/image";
+import Link from "next/link";
 function Navbar() {
   return (
     <>
       <section className="navbar flex flex-wrap justify-between items-center px-6 py-4 bg-customNav">
         {/* Logo */}
-        <div className="logo text-3xl font-extrabold text-gray-800">Shop.co</div>
+        <div className="logo text-3xl font-extrabold text-gray-800"><Link href="/">Shop.co</Link></div>
 
         {/* Navigation Items */}
         <div className="nav-items w-full md:w-auto">
           <ul className="flex flex-wrap gap-7 items-center justify-center">
             {/* Navigation Links */}
             <li>
-              <a href="#" className="hover:text-blue-500 transition-colors">
+              <a href="/Components/newArrival" className="hover:text-blue-500 transition-colors">
                 Shop
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition-colors">
+              <a href="/Components/newArrival" className="hover:text-blue-500 transition-colors">
                 On Sale
               </a>
             </li>
@@ -26,7 +27,7 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500 transition-colors">
+              <a href="/Components/newArrival" className="hover:text-blue-500 transition-colors">
                 Brands
               </a>
             </li>
@@ -49,7 +50,7 @@ function Navbar() {
 
             {/* Icons */}
             <li>
-              <a href="#" className="hover:text-blue-500 transition-colors">
+              <a href="/Components/ProductDetails" className="hover:text-blue-500 transition-colors">
                 <Image src="./icons/cart.svg" alt="Cart" className="h-6 w-6"
                 width={20}
                 height={20} />

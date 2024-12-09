@@ -18,9 +18,10 @@ const Card = ({ product }: ProductCardProps) => {
   const stars = Array.from({ length: 5 }, (_, index) => index < product.rating);
 
   return (
-    <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+    <div className="max-w-xs bg-white border cursor-pointer border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
       {/* Product Image */}
       <div className="h-48 overflow-hidden rounded-t-lg">
+      <a href="/Components/ProductDetails">
         <Image
           src={product.image}
           alt={product.name}
@@ -28,6 +29,7 @@ const Card = ({ product }: ProductCardProps) => {
           height={300}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
         />
+        </a>
       </div>
 
       {/* Product Details */}
